@@ -1,0 +1,26 @@
+
+@import "mq";
+@import "variables";
+@import "listas";
+@import "extend";
+@import "mixin";
+/*ESTILOS DE HTML CONTACTOS*/
+.body-contactos{
+    background-color: nth($color,1);
+    header{
+        @extend %estilos-identicos;
+    }
+    .principal-contactos{
+        margin-top: 10rem;
+        margin-bottom: 12rem;
+        text-align: center;
+     }
+
+     .footer-contactos{
+        align-items: center;
+        @extend %estilos-identicos;
+
+
+     }
+}
+    

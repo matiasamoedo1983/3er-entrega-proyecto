@@ -1,0 +1,136 @@
+
+/*mq areas*/
+@media screen and (min-width:800px) {
+    .contenedor-areas{
+       display: grid;
+        height:100vh;
+        grid-template-areas: 
+        "areas-main-derecho-laboral areas-main-derecho-laboral"
+        "areas-main-derecho-civil areas-main-marcasypatentes"
+        "areas-footer areas-footer"
+        ; 
+        gap: 1rem;
+        grid-template-columns: 2fr 4fr;
+        grid-template-rows: 2fr 2fr 2fr 0.5fr;
+    }
+    .areas-main-derecho-civil{
+       grid-area: areas-main-derecho-civil;
+       flex-direction: column;
+       margin: 1rem;
+       padding: 1rem;
+    }
+    
+    .areas-main-marcasypatentes{
+       grid-area: areas-main-marcasypatentes;
+       flex-direction: column;
+       margin: 1rem;
+       padding: 1rem;
+    }
+    
+    .areas-main-derecho-laboral{
+       grid-area: areas-main-derecho-laboral;
+       flex-direction: column;
+       margin: 1rem;
+       padding: 1rem;
+    }
+ 
+    .areas-footer{
+       grid-area: areas-footer;
+       flex-direction: column;
+    }
+ 
+    }
+
+    /*mq index*/
+@media screen and (min-width:800px) {
+   
+    .main-index div{
+ 
+        flex-direction: row;
+ 
+    }
+ 
+ }
+
+ /*mq sucursales*/
+@media screen and (min-width:800px) {
+   .contenedor-sucursales{
+      display: grid;
+       height:100vh;
+       grid-template-areas: 
+       "sucursales-main-caba sucursales-main-zonasur"
+       "sucursales-main-zonaoeste sucursales-main-zonanorte"
+       "sucursales-footer sucursales-footer";
+       gap: 1rem;
+       grid-template-columns: 4fr 4fr;
+       grid-template-rows: 2fr 2fr 2fr 2fr 0.5fr;
+  
+   .sucursales-main-caba{
+      grid-area: sucursales-main-caba;
+      flex-direction: column;
+      
+   }
+   
+   .sucursales-main-zonasur{
+      grid-area: sucursales-main-zonasur;
+      flex-direction: column;
+   }
+   
+   .sucursales-main-zonaoeste{
+      grid-area: sucursales-main-zonaoeste;
+      flex-direction: column;
+   }
+   .sucursales-main-zonanorte{
+      grid-area: sucursales-main-zonanorte;
+      flex-direction: column;
+   }
+
+   .sucursales-footer{
+      grid-area: sucursales-footer;
+      flex-direction: column;
+   }
+
+   }
+}
+
+
+/*mq  nosotros*/
+@media screen and (min-width:800px) {
+   .contenedor-nosotros{
+      display: grid;
+       height:100vh;
+       grid-template-areas: 
+       "nosotros-logodejusticia nosotros-logodejusticia nosotros-staff"
+       "nosotros-matias nosotros-sebastian nosotros-sofia"
+       "nosotros-footer nosotros-footer nosotros-footer";
+       gap: 1rem;
+       grid-template-columns: 2fr 2fr 2fr;
+       grid-template-rows: 2fr 2fr 2fr;
+
+   .nosotros-logodejusticia{
+      grid-area: nosotros-logodejusticia;
+      flex-direction: column;
+   }
+   
+   .nosotros-staff{
+      display: block;
+      grid-area: nosotros-staff;
+      flex-direction: column;
+   }
+   
+   .nosotros-matias{
+      grid-area: nosotros-matias;
+      flex-direction: column;
+   }
+   .nosotros-sebastian{
+      grid-area: nosotros-sebastian;
+      flex-direction: column;
+   }
+
+   .nosotros-footer{
+      grid-area: nosotros-footer;
+      flex-direction: column;
+   }
+
+   }
+}

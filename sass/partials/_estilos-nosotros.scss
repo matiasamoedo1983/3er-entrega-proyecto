@@ -1,0 +1,87 @@
+@import "mq";
+@import "variables";
+@import "listas";
+@import "extend";
+@import "mixin";
+
+/*ESTILOS DE HTML NOSOTROS*/
+.body-nosotros{
+   background-color: nth($color,1);
+    header{
+      @extend %estilos-identicos;
+    }
+/*estilo para padre de NOSOTROS */
+.contenedor-nosotros{
+    display: grid;
+    height:$medida-principal;
+    grid-template-areas: 
+    "nosotros-logodejusticia"
+    "nosotros-staff"  
+    "nosotros-matias"
+    "nosotros-sebastian"
+    "nosotros-sofia"
+    "nosotros-footer";
+    gap: 1rem;
+    grid-template-columns: 6fr ;
+    grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr;
+ 
+    /*estilos de los hijos de NOSOTROS*/
+.nosotros-logodejusticia{
+    grid-area: nosotros-logodejusticia;
+    background-color: nth($color,4);
+    @include estilos-comunes;
+    img{
+      width: $medida-secundaria;
+    }
+    
+ }
+ 
+ .nosotros-staff{
+    display: none;
+    grid-area: nosotros-staff;
+    background-color: nth($color,5);    
+    @include estilos-comunes;
+
+    div{
+        text-align: center;
+        margin: 1rem;
+    }
+ }
+ 
+ .nosotros-matias{
+    grid-area: nosotros-matias;
+    background-color: nth($color,6);    
+    @include estilos-comunes;
+   text-align: center;
+ }
+ 
+ .nosotros-sebastian{
+    grid-area: nosotros-sebastian;
+    background-color: nth($color,7);
+    @include estilos-comunes;
+    text-align: center;
+ }
+ 
+ .nosotros-sofia{
+    grid-area: nosotros-sofia;
+    background-color: nth($color,8);
+    @include estilos-comunes;
+    text-align: center;  
+ }
+ 
+ .nosotros-footer{
+    grid-area: nosotros-footer;
+    flex-direction: row;
+    margin: 1rem;
+    padding: 1rem;
+    align-items: center;
+    @extend %estilos-identicos;
+
+ 
+ }
+
+
+}
+
+
+}

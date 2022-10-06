@@ -1,0 +1,82 @@
+
+@import "mq";
+@import "variables";
+@import "listas";
+@import "extend";
+@import "mixin";
+/*ESTILOS DEL HTML AREAS*/
+.body-areas{
+    background-color: nth($color,1);
+    header{
+         @extend %estilos-identicos;
+            } 
+    /*estilos del padre para html areas*/
+ .contenedor-areas{
+         display: grid;
+          height:$medida-principal;
+          grid-template-areas: 
+           "areas-main-derecho-laboral"
+          "areas-main-derecho-civil"
+          "areas-main-marcasypatentes"
+          "areas-footer"; 
+          gap: 1rem;
+          grid-template-columns: 1fr;
+          grid-template-rows: 4fr 2fr 2fr 2fr;
+          
+            .areas-main-derecho-civil{
+                grid-area: areas-main-derecho-civil;
+                background-color: nth($color,4);
+                margin: 1rem;
+                padding: 1rem;
+
+                div{
+                    padding: 2rem;
+                    h3{ 
+                        text-align: center;
+                        margin-bottom: 2rem;
+                    }
+                   
+                }
+
+                
+            }
+            .areas-main-derecho-laboral{
+                grid-area: areas-main-derecho-laboral;
+                background-color: nth($color,5);
+                margin: 1rem;
+                padding: 1rem;
+                div{
+                    padding: 2rem;
+                    h3{ 
+                        text-align: center;
+                        margin-bottom: 2rem;
+                    }
+                }
+             }
+
+             .areas-main-marcasypatentes{
+                grid-area: areas-main-marcasypatentes;
+                background-color: nth($color,6);
+                margin: 1rem;
+                padding: 1rem;
+                div{
+                    padding: 2rem;
+                    h3{ 
+                        text-align: center;
+                        margin-bottom: 2rem;
+                    }
+                }
+             }
+
+         
+
+         .areas-footer{
+            grid-area: areas-footer;
+            flex-direction: row;
+            @extend %estilos-identicos;
+
+         }
+
+      }
+}
+   

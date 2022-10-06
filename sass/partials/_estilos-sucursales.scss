@@ -1,0 +1,109 @@
+
+@import "mq";
+@import "variables";
+@import "listas";
+@import "extend";
+@import "mixin";
+/*ESTILOS DE HTML SUCURSALES*/
+.body-sucursales{
+    background-color: nth($color,1);
+    header{
+        @extend %estilos-identicos;
+    }
+/*estilos de padre para sucursales.html*/
+    .contenedor-sucursales{
+        display: grid;
+        height:$medida-principal;
+        grid-template-areas: 
+        "sucursales-main-caba"
+        "sucursales-main-zonasur"  
+        "sucursales-main-zonaoeste"
+        "sucursales-main-zonanorte"
+        "sucursales-footer";
+        gap: 1rem;
+        grid-template-columns: 8fr ;
+        grid-template-rows: 2fr 2fr 2fr 2fr 0.5fr;
+
+        /*estilos de los hijos*/
+ .sucursales-main-caba{
+    grid-area: sucursales-main-caba;
+    background-color: nth($color,4);
+    margin: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-around;
+
+    div{
+        text-align: center;
+        margin: 1rem;   
+    }
+    .mapa{
+        width: $medida-secundaria;
+     }
+    
+ }
+ 
+ .sucursales-main-zonasur{
+    grid-area: sucursales-main-zonasur;
+    background-color: nth($color,6);
+    margin: 2rem;
+    margin: 1rem;
+       padding: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    div{
+        text-align: center;
+        margin: 1rem;   
+    }
+    .mapa{
+        width: $medida-secundaria;
+     }
+ }
+ 
+ .sucursales-main-zonaoeste{
+    grid-area: sucursales-main-zonaoeste;
+    background-color: nth($color,5);
+    margin: 2rem;
+    margin: 1rem;
+       padding: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    div{
+        text-align: center;
+        margin: 1rem;   
+    }
+    .mapa{
+        width: $medida-secundaria;
+     }
+    
+ }
+ 
+ .sucursales-main-zonanorte{
+    grid-area: sucursales-main-zonanorte;
+    background-color: nth($color,7);
+    margin: 2rem;
+    margin: 1rem;
+       padding: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    div{
+        text-align: center;
+        margin: 1rem;   
+    }
+    .mapa{
+        width: $medida-secundaria;
+     }
+ }
+ 
+ .sucursales-footer{
+    grid-area: sucursales-footer;
+    flex-direction: row;
+    margin: 1rem;
+    padding: 1rem;
+     align-items: center;
+     @extend %estilos-identicos;
+     }
+  }
+}
+    

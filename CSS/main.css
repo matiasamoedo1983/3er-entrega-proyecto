@@ -1,499 +1,774 @@
 /*reset css*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-}
-
-/*ESTILOS -GENERALES*/
-
-/*estilos del body*/
-body{
-   background-color: salmon;
-   }
-
- /*estilos de footer */
- footer{
-   text-align: center;
-   color: blanchedalmond;
-   background-color: brown;
-   background-image: linear-gradient(to right, brown, salmon);
-
-   }
-
-/*estilos del header */
-
- header{
-   text-align: right;
-   color: blanchedalmond;
-   background-color: brown;
-   
- }
-
-/*ESTILOS DEL INDEX*/
-/*estilos del contenedor*/
-
-.contenedor-index{
+/*mq areas*/
+@media screen and (min-width: 800px) {
+  .contenedor-areas {
     display: grid;
     height: 100vh;
-}
-
- /*estilos de main para  index*/
-
-.main-index{
-    display: flex;
-    flex-direction: column;
-    align-items: center ;
-    padding: 1rem;
-}
-
-.main-index h3{
-   text-align: center;
-   margin-top: 3rem;
-   margin-bottom: 1rem;
-}
-.main-index p{
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.main-index img{
-   width: 100%; 
-}
-
-.main-index div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-/*mq*/
-@media screen and (min-width:800px) {
-   
-   .main-index div{
-
-       flex-direction: row;
-
-   }
-
-}
-
-
-
-
-
-
-
-/*ESTILOS PARA AREAS.HTML*/
-
-
-/*estilos del padre para areas*/
-.contenedor-areas{
-   display: grid;
-    height:100vh;
-    grid-template-areas: 
-    "areas-main-derecho-laboral"
-    "areas-main-derecho-civil"
-    "areas-main-marcasypatentes"
-    "areas-footer"
-    ; 
+    grid-template-areas: "areas-main-derecho-laboral areas-main-derecho-laboral" "areas-main-derecho-civil areas-main-marcasypatentes" "areas-footer areas-footer";
     gap: 1rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4fr 2fr  2fr 2fr;
-}
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 2fr 2fr 2fr 0.5fr; }
+  .areas-main-derecho-civil {
+    grid-area: areas-main-derecho-civil;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-main-marcasypatentes {
+    grid-area: areas-main-marcasypatentes;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-main-derecho-laboral {
+    grid-area: areas-main-derecho-laboral;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-footer {
+    grid-area: areas-footer;
+    flex-direction: column; } }
 
-/*estilos de los hijos para areas*/
+/*mq index*/
+@media screen and (min-width: 800px) {
+  .main-index div {
+    flex-direction: row; } }
 
-.areas-main-derecho-laboral{
-   grid-area: areas-main-derecho-laboral;
-   background-color: rgb(168, 159, 159);
-   margin: 1rem;
-   padding: 1rem;
-}
-
-.areas-main-derecho-civil{
-   grid-area: areas-main-derecho-civil;
-   background-color: rgb(247, 163, 154) ;
-   margin: 1rem;
-   padding: 1rem;
-   
-}
-
-.areas-main-marcasypatentes{
-   grid-area: areas-main-marcasypatentes;
-   background-color: rgb(133, 66, 58);
-   margin: 1rem;
-   padding: 1rem;
-}
-
-.areas-footer{
-   grid-area: areas-footer;
-   flex-direction: row;
-   margin: 1rem;
-   padding: 1rem;
-   background-image: linear-gradient(to right, brown, salmon);
-}
-
-
-/*mq*/
-@media screen and (min-width:800px) {
-   ¨
-   main div{
-      display: flex;
-      flex-direction: column;
-   }
-   .contenedor-areas{
-      display: grid;
-       height:100vh;
-       grid-template-areas: 
-       "areas-main-derecho-laboral areas-main-derecho-laboral"
-       "areas-main-derecho-civil areas-main-marcasypatentes"
-       "areas-footer areas-footer"
-       ; 
-       gap: 1rem;
-       grid-template-columns: 2fr 4fr;
-       grid-template-rows: 2fr 2fr 2fr 0.5fr;
-   }
-   .areas-main-derecho-civil{
-      grid-area: areas-main-derecho-civil;
-      flex-direction: column;
-      margin: 1rem;
-      padding: 1rem;
-   }
-   
-   .areas-main-marcasypatentes{
-      grid-area: areas-main-marcasypatentes;
-      flex-direction: column;
-      margin: 1rem;
-      padding: 1rem;
-   }
-   
-   .areas-main-derecho-laboral{
-      grid-area: areas-main-derecho-laboral;
-      flex-direction: column;
-      margin: 1rem;
-      padding: 1rem;
-   }
-
-   .areas-footer{
-      grid-area: areas-footer;
-      flex-direction: column;
-   }
-
-   }
-  
-
-/*ESTILOS PARA CONTACTOS.HTML*/
-
-.principal-contactos{
-   margin: 5rem;
-   text-align: center;
-}
-
-
-
-
-/*ESTILOS PARA SUCURSALES.HTML*/
-
-/**/
-/*estilos de main y section para  sucursales*/
-
-.sucursales-main-caba div{
-   text-align: center;
- margin: 1rem;
-}
-.sucursales-main-zonasur{
-   text-align: center;
-   margin: 1rem;
-}  
-.sucursales-main-zonaoeste{
-   text-align: center;
-   margin: 1rem;
-}
-.sucursales-main-zonanorte{
-   text-align: center;
-   margin: 1rem;
-}
-.mapa{
-   width: 100%;
-}
-   
-
-/*estilos de padre para sucursales.html*/
-
-.contenedor-sucursales{
-   display: grid;
-   height:100vh;
-   grid-template-areas: 
-   "sucursales-main-caba"
-   "sucursales-main-zonasur"  
-   "sucursales-main-zonaoeste"
-   "sucursales-main-zonanorte"
-   "sucursales-footer";
-   gap: 1rem;
-   grid-template-columns: 8fr ;
-   grid-template-rows: 2fr 2fr 2fr 2fr 0.5fr;
-}
-
-/*estilos de los hijos*/
-.sucursales-main-caba{
-   grid-area: sucursales-main-caba;
-   background-color: rgb(247, 163, 154) ;
-   margin: 2rem;
-   margin: 1rem;
-   padding: 1rem;
-   align-items: center;
-   justify-content: space-around;
-   
-}
-
-.sucursales-main-zonasur{
-   grid-area: sucursales-main-zonasur;
-   background-color: rgb(133, 66, 58);
-   margin: 2rem;
-   margin: 1rem;
-      padding: 1rem;
-   align-items: center;
-   justify-content: space-around;
-}
-
-.sucursales-main-zonaoeste{
-   grid-area: sucursales-main-zonaoeste;
-   background-color: rgb(168, 159, 159);
-   margin: 2rem;
-   margin: 1rem;
-      padding: 1rem;
-   align-items: center;
-   justify-content: space-around;
-}
-
-.sucursales-main-zonanorte{
-   grid-area: sucursales-main-zonanorte;
-   background-color: rgb(245, 98, 98);
-   margin: 2rem;
-   margin: 1rem;
-      padding: 1rem;
-   align-items: center;
-   justify-content: space-around;
-}
-
-.sucursales-footer{
-   grid-area: sucursales-footer;
-   flex-direction: row;
-   margin: 1rem;
-   padding: 1rem;
-   background-image: linear-gradient(to right, brown, salmon);
-
-}
-
-
-/*mq*/
-@media screen and (min-width:800px) {
-   ¨
-   main div{
-      display: flex;
-      flex-direction: column;
-   }
-   
-   .contenedor-sucursales{
-      display: grid;
-       height:100vh;
-       grid-template-areas: 
-       "sucursales-main-caba sucursales-main-zonasur"
-       "sucursales-main-zonaoeste sucursales-main-zonanorte"
-       "sucursales-footer sucursales-footer";
-       gap: 1rem;
-       grid-template-columns: 4fr 4fr;
-       grid-template-rows: 2fr 2fr 2fr 2fr 0.5fr;
-   }
-   .sucursales-main-caba{
+/*mq sucursales*/
+@media screen and (min-width: 800px) {
+  .contenedor-sucursales {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "sucursales-main-caba sucursales-main-zonasur" "sucursales-main-zonaoeste sucursales-main-zonanorte" "sucursales-footer sucursales-footer";
+    gap: 1rem;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr 0.5fr; }
+    .contenedor-sucursales .sucursales-main-caba {
       grid-area: sucursales-main-caba;
-      flex-direction: column;
-      
-   }
-   
-   .sucursales-main-zonasur{
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonasur {
       grid-area: sucursales-main-zonasur;
-      flex-direction: column;
-   }
-   
-   .sucursales-main-zonaoeste{
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonaoeste {
       grid-area: sucursales-main-zonaoeste;
-      flex-direction: column;
-   }
-   .sucursales-main-zonanorte{
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonanorte {
       grid-area: sucursales-main-zonanorte;
-      flex-direction: column;
-   }
-
-   .sucursales-footer{
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-footer {
       grid-area: sucursales-footer;
-      flex-direction: column;
-   }
+      flex-direction: column; } }
 
-   }
-
-
-
-
-
-
-/*ESTILOS PARA NOSOTROS.HTML*/
-
-/**/
-/*estilos de main y section para  nosotros*/
-
-.nosotros-logodejusticia img{
-   width: 100%;
-}
-
-.nosotros-staff div{
-   text-align: center;
- margin: 1rem;
-}
-.nosotros-matias{
-   text-align: center;
-   margin: 1rem;
-}  
-
-.nosotros-sebastian{
-   text-align: center;
-   margin: 1rem;
-}  
-
-
-.nosotros-sofia{
-   text-align: center;
-   margin: 1rem;
-}
-
-   
-
-/*estilos de padre para NOSOTROS.html*/
-/*estilo para padre de NOSOTROS */
-.contenedor-nosotros{
-   display: grid;
-   height:100vh;
-   grid-template-areas: 
-   "nosotros-logodejusticia"
-   "nosotros-staff"  
-   "nosotros-matias"
-   "nosotros-sebastian"
-   "nosotros-sofia"
-   "nosotros-footer";
-   gap: 1rem;
-   grid-template-columns: 6fr ;
-   grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr;
-}
-
-/*estilos de los hijos de NOSOTROS*/
-.nosotros-logodejusticia{
-   grid-area: nosotros-logodejusticia;
-   background-color: rgb(247, 163, 154) ;
-   margin: 2rem;
-   margin: 1rem;
-   padding: 1rem;
-   align-items: center;
-   justify-content: space-around;
-   
-}
-
-.nosotros-staff{
-   display: none;
-   grid-area: nosotros-staff;
-   background-color: rgb(133, 66, 58);
-   margin: 2rem;
-   margin: 1rem;
-      padding: 1rem;
-   align-items: center;
-   justify-content: space-around;
-}
-
-.nosotros-matias{
-   grid-area: nosotros-matias;
-   background-color: rgb(168, 159, 159);
-   margin: 2rem;
-   margin: 1rem;
-      padding: 1rem;
-   align-items: center;
-   justify-content: space-around;
-}
-
-.nosotros-sebastian{
-   grid-area: nosotros-sebastian;
-   background-color: rgb(245, 98, 98);
-   margin: 2rem;
-   margin: 1rem;
-      padding: 1rem;
-   align-items: center;
-   justify-content: space-around;
-}
-
-.nosotros-sofia{
-   grid-area: nosotros-sofia;
-   background-color: rgb(158, 59, 59);
-   margin: 2rem;
-   margin: 1rem;
-      padding: 1rem;
-   align-items: center;
-   justify-content: space-around;
-}
-
-.nosotros-footer{
-   grid-area: nosotros-footer;
-   flex-direction: row;
-   margin: 1rem;
-   padding: 1rem;
-   background-image: linear-gradient(to right, brown, salmon);
-
-}
-
-
-/*mq*/
-@media screen and (min-width:800px) {
-   ¨
-   main div{
-      display: flex;
-      flex-direction: column;
-   }
-   
-   .contenedor-nosotros{
-      display: grid;
-       height:100vh;
-       grid-template-areas: 
-       "nosotros-logodejusticia nosotros-logodejusticia nosotros-staff"
-       "nosotros-matias nosotros-sebastian nosotros-sofia"
-       "nosotros-footer nosotros-footer nosotros-footer";
-       gap: 1rem;
-       grid-template-columns: 2fr 2fr 2fr;
-       grid-template-rows: 2fr 2fr 2fr;
-   }
-   .nosotros-logodejusticia{
+/*mq  nosotros*/
+@media screen and (min-width: 800px) {
+  .contenedor-nosotros {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "nosotros-logodejusticia nosotros-logodejusticia nosotros-staff" "nosotros-matias nosotros-sebastian nosotros-sofia" "nosotros-footer nosotros-footer nosotros-footer";
+    gap: 1rem;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr; }
+    .contenedor-nosotros .nosotros-logodejusticia {
       grid-area: nosotros-logodejusticia;
-      flex-direction: column;
-   }
-   
-   .nosotros-staff{
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-staff {
       display: block;
       grid-area: nosotros-staff;
-      flex-direction: column;
-   }
-   
-   .nosotros-matias{
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-matias {
       grid-area: nosotros-matias;
-      flex-direction: column;
-   }
-   .nosotros-sebastian{
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-sebastian {
       grid-area: nosotros-sebastian;
-      flex-direction: column;
-   }
-
-   .nosotros-footer{
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-footer {
       grid-area: nosotros-footer;
-      flex-direction: column;
-   }
+      flex-direction: column; } }
 
-   }
+/*variables de medida*/
+/*lista de colores*/
+.body-index header, .body-index .contenedor-index .footer-index, .body-areas header, .body-areas .contenedor-areas .areas-footer, .body-contactos header, .body-contactos .footer-contactos, .body-nosotros header, .body-nosotros .contenedor-nosotros .nosotros-footer, .body-sucursales header, .body-sucursales .contenedor-sucursales .sucursales-footer {
+  text-align: center;
+  color: #ffeaca;
+  background-color: #a82f2f;
+  background-image: linear-gradient(to right, #a82f2f, #eb786b); }
+
+.body-index {
+  background-color: #eb786b; }
+  .body-index .contenedor-index {
+    display: grid;
+    height: 100vh; }
+    .body-index .contenedor-index .main-index {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem; }
+      .body-index .contenedor-index .main-index div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around; }
+        .body-index .contenedor-index .main-index div img {
+          width: 100%; }
+      .body-index .contenedor-index .main-index p {
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem; }
+      .body-index .contenedor-index .main-index h3 {
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 1rem; }
+    .body-index .contenedor-index .footer-index {
+      align-items: center; }
+
+/*mq areas*/
+@media screen and (min-width: 800px) {
+  .contenedor-areas {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "areas-main-derecho-laboral areas-main-derecho-laboral" "areas-main-derecho-civil areas-main-marcasypatentes" "areas-footer areas-footer";
+    gap: 1rem;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 2fr 2fr 2fr 0.5fr; }
+  .areas-main-derecho-civil {
+    grid-area: areas-main-derecho-civil;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-main-marcasypatentes {
+    grid-area: areas-main-marcasypatentes;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-main-derecho-laboral {
+    grid-area: areas-main-derecho-laboral;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-footer {
+    grid-area: areas-footer;
+    flex-direction: column; } }
+
+/*mq index*/
+@media screen and (min-width: 800px) {
+  .main-index div {
+    flex-direction: row; } }
+
+/*mq sucursales*/
+@media screen and (min-width: 800px) {
+  .contenedor-sucursales {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "sucursales-main-caba sucursales-main-zonasur" "sucursales-main-zonaoeste sucursales-main-zonanorte" "sucursales-footer sucursales-footer";
+    gap: 1rem;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr 0.5fr; }
+    .contenedor-sucursales .sucursales-main-caba {
+      grid-area: sucursales-main-caba;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonasur {
+      grid-area: sucursales-main-zonasur;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonaoeste {
+      grid-area: sucursales-main-zonaoeste;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonanorte {
+      grid-area: sucursales-main-zonanorte;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-footer {
+      grid-area: sucursales-footer;
+      flex-direction: column; } }
+
+/*mq  nosotros*/
+@media screen and (min-width: 800px) {
+  .contenedor-nosotros {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "nosotros-logodejusticia nosotros-logodejusticia nosotros-staff" "nosotros-matias nosotros-sebastian nosotros-sofia" "nosotros-footer nosotros-footer nosotros-footer";
+    gap: 1rem;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr; }
+    .contenedor-nosotros .nosotros-logodejusticia {
+      grid-area: nosotros-logodejusticia;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-staff {
+      display: block;
+      grid-area: nosotros-staff;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-matias {
+      grid-area: nosotros-matias;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-sebastian {
+      grid-area: nosotros-sebastian;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-footer {
+      grid-area: nosotros-footer;
+      flex-direction: column; } }
+
+/*variables de medida*/
+/*lista de colores*/
+.body-index header, .body-index .contenedor-index .footer-index, .body-areas header, .body-areas .contenedor-areas .areas-footer, .body-contactos header, .body-contactos .footer-contactos, .body-nosotros header, .body-nosotros .contenedor-nosotros .nosotros-footer, .body-sucursales header, .body-sucursales .contenedor-sucursales .sucursales-footer {
+  text-align: center;
+  color: #ffeaca;
+  background-color: #a82f2f;
+  background-image: linear-gradient(to right, #a82f2f, #eb786b); }
+
+/*ESTILOS DEL HTML AREAS*/
+.body-areas {
+  background-color: #eb786b;
+  /*estilos del padre para html areas*/ }
+  .body-areas .contenedor-areas {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "areas-main-derecho-laboral" "areas-main-derecho-civil" "areas-main-marcasypatentes" "areas-footer";
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 2fr 2fr 2fr; }
+    .body-areas .contenedor-areas .areas-main-derecho-civil {
+      grid-area: areas-main-derecho-civil;
+      background-color: #f7a39a;
+      margin: 1rem;
+      padding: 1rem; }
+      .body-areas .contenedor-areas .areas-main-derecho-civil div {
+        padding: 2rem; }
+        .body-areas .contenedor-areas .areas-main-derecho-civil div h3 {
+          text-align: center;
+          margin-bottom: 2rem; }
+    .body-areas .contenedor-areas .areas-main-derecho-laboral {
+      grid-area: areas-main-derecho-laboral;
+      background-color: #a89f9f;
+      margin: 1rem;
+      padding: 1rem; }
+      .body-areas .contenedor-areas .areas-main-derecho-laboral div {
+        padding: 2rem; }
+        .body-areas .contenedor-areas .areas-main-derecho-laboral div h3 {
+          text-align: center;
+          margin-bottom: 2rem; }
+    .body-areas .contenedor-areas .areas-main-marcasypatentes {
+      grid-area: areas-main-marcasypatentes;
+      background-color: #85423a;
+      margin: 1rem;
+      padding: 1rem; }
+      .body-areas .contenedor-areas .areas-main-marcasypatentes div {
+        padding: 2rem; }
+        .body-areas .contenedor-areas .areas-main-marcasypatentes div h3 {
+          text-align: center;
+          margin-bottom: 2rem; }
+    .body-areas .contenedor-areas .areas-footer {
+      grid-area: areas-footer;
+      flex-direction: row; }
+
+/*mq areas*/
+@media screen and (min-width: 800px) {
+  .contenedor-areas {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "areas-main-derecho-laboral areas-main-derecho-laboral" "areas-main-derecho-civil areas-main-marcasypatentes" "areas-footer areas-footer";
+    gap: 1rem;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 2fr 2fr 2fr 0.5fr; }
+  .areas-main-derecho-civil {
+    grid-area: areas-main-derecho-civil;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-main-marcasypatentes {
+    grid-area: areas-main-marcasypatentes;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-main-derecho-laboral {
+    grid-area: areas-main-derecho-laboral;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-footer {
+    grid-area: areas-footer;
+    flex-direction: column; } }
+
+/*mq index*/
+@media screen and (min-width: 800px) {
+  .main-index div {
+    flex-direction: row; } }
+
+/*mq sucursales*/
+@media screen and (min-width: 800px) {
+  .contenedor-sucursales {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "sucursales-main-caba sucursales-main-zonasur" "sucursales-main-zonaoeste sucursales-main-zonanorte" "sucursales-footer sucursales-footer";
+    gap: 1rem;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr 0.5fr; }
+    .contenedor-sucursales .sucursales-main-caba {
+      grid-area: sucursales-main-caba;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonasur {
+      grid-area: sucursales-main-zonasur;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonaoeste {
+      grid-area: sucursales-main-zonaoeste;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonanorte {
+      grid-area: sucursales-main-zonanorte;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-footer {
+      grid-area: sucursales-footer;
+      flex-direction: column; } }
+
+/*mq  nosotros*/
+@media screen and (min-width: 800px) {
+  .contenedor-nosotros {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "nosotros-logodejusticia nosotros-logodejusticia nosotros-staff" "nosotros-matias nosotros-sebastian nosotros-sofia" "nosotros-footer nosotros-footer nosotros-footer";
+    gap: 1rem;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr; }
+    .contenedor-nosotros .nosotros-logodejusticia {
+      grid-area: nosotros-logodejusticia;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-staff {
+      display: block;
+      grid-area: nosotros-staff;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-matias {
+      grid-area: nosotros-matias;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-sebastian {
+      grid-area: nosotros-sebastian;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-footer {
+      grid-area: nosotros-footer;
+      flex-direction: column; } }
+
+/*variables de medida*/
+/*lista de colores*/
+.body-index header, .body-index .contenedor-index .footer-index, .body-areas header, .body-areas .contenedor-areas .areas-footer, .body-contactos header, .body-contactos .footer-contactos, .body-nosotros header, .body-nosotros .contenedor-nosotros .nosotros-footer, .body-sucursales header, .body-sucursales .contenedor-sucursales .sucursales-footer {
+  text-align: center;
+  color: #ffeaca;
+  background-color: #a82f2f;
+  background-image: linear-gradient(to right, #a82f2f, #eb786b); }
+
+/*ESTILOS DE HTML CONTACTOS*/
+.body-contactos {
+  background-color: #eb786b; }
+  .body-contactos .principal-contactos {
+    margin-top: 10rem;
+    margin-bottom: 12rem;
+    text-align: center; }
+  .body-contactos .footer-contactos {
+    align-items: center; }
+
+/*mq areas*/
+@media screen and (min-width: 800px) {
+  .contenedor-areas {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "areas-main-derecho-laboral areas-main-derecho-laboral" "areas-main-derecho-civil areas-main-marcasypatentes" "areas-footer areas-footer";
+    gap: 1rem;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 2fr 2fr 2fr 0.5fr; }
+  .areas-main-derecho-civil {
+    grid-area: areas-main-derecho-civil;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-main-marcasypatentes {
+    grid-area: areas-main-marcasypatentes;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-main-derecho-laboral {
+    grid-area: areas-main-derecho-laboral;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-footer {
+    grid-area: areas-footer;
+    flex-direction: column; } }
+
+/*mq index*/
+@media screen and (min-width: 800px) {
+  .main-index div {
+    flex-direction: row; } }
+
+/*mq sucursales*/
+@media screen and (min-width: 800px) {
+  .contenedor-sucursales {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "sucursales-main-caba sucursales-main-zonasur" "sucursales-main-zonaoeste sucursales-main-zonanorte" "sucursales-footer sucursales-footer";
+    gap: 1rem;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr 0.5fr; }
+    .contenedor-sucursales .sucursales-main-caba {
+      grid-area: sucursales-main-caba;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonasur {
+      grid-area: sucursales-main-zonasur;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonaoeste {
+      grid-area: sucursales-main-zonaoeste;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonanorte {
+      grid-area: sucursales-main-zonanorte;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-footer {
+      grid-area: sucursales-footer;
+      flex-direction: column; } }
+
+/*mq  nosotros*/
+@media screen and (min-width: 800px) {
+  .contenedor-nosotros {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "nosotros-logodejusticia nosotros-logodejusticia nosotros-staff" "nosotros-matias nosotros-sebastian nosotros-sofia" "nosotros-footer nosotros-footer nosotros-footer";
+    gap: 1rem;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr; }
+    .contenedor-nosotros .nosotros-logodejusticia {
+      grid-area: nosotros-logodejusticia;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-staff {
+      display: block;
+      grid-area: nosotros-staff;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-matias {
+      grid-area: nosotros-matias;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-sebastian {
+      grid-area: nosotros-sebastian;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-footer {
+      grid-area: nosotros-footer;
+      flex-direction: column; } }
+
+/*variables de medida*/
+/*lista de colores*/
+.body-index header, .body-index .contenedor-index .footer-index, .body-areas header, .body-areas .contenedor-areas .areas-footer, .body-contactos header, .body-contactos .footer-contactos, .body-nosotros header, .body-nosotros .contenedor-nosotros .nosotros-footer, .body-sucursales header, .body-sucursales .contenedor-sucursales .sucursales-footer {
+  text-align: center;
+  color: #ffeaca;
+  background-color: #a82f2f;
+  background-image: linear-gradient(to right, #a82f2f, #eb786b); }
+
+/*ESTILOS DE HTML NOSOTROS*/
+.body-nosotros {
+  background-color: #eb786b;
+  /*estilo para padre de NOSOTROS */ }
+  .body-nosotros .contenedor-nosotros {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "nosotros-logodejusticia" "nosotros-staff"   "nosotros-matias" "nosotros-sebastian" "nosotros-sofia" "nosotros-footer";
+    gap: 1rem;
+    grid-template-columns: 6fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr;
+    /*estilos de los hijos de NOSOTROS*/ }
+    .body-nosotros .contenedor-nosotros .nosotros-logodejusticia {
+      grid-area: nosotros-logodejusticia;
+      background-color: #f7a39a;
+      margin: 4rem;
+      padding: 1rem;
+      align-items: center;
+      justify-content: space-around; }
+      .body-nosotros .contenedor-nosotros .nosotros-logodejusticia img {
+        width: 100%; }
+    .body-nosotros .contenedor-nosotros .nosotros-staff {
+      display: none;
+      grid-area: nosotros-staff;
+      background-color: #a89f9f;
+      margin: 4rem;
+      padding: 1rem;
+      align-items: center;
+      justify-content: space-around; }
+      .body-nosotros .contenedor-nosotros .nosotros-staff div {
+        text-align: center;
+        margin: 1rem; }
+    .body-nosotros .contenedor-nosotros .nosotros-matias {
+      grid-area: nosotros-matias;
+      background-color: #85423a;
+      margin: 4rem;
+      padding: 1rem;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center; }
+    .body-nosotros .contenedor-nosotros .nosotros-sebastian {
+      grid-area: nosotros-sebastian;
+      background-color: #f56262;
+      margin: 4rem;
+      padding: 1rem;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center; }
+    .body-nosotros .contenedor-nosotros .nosotros-sofia {
+      grid-area: nosotros-sofia;
+      background-color: #9e3b3b;
+      margin: 4rem;
+      padding: 1rem;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center; }
+    .body-nosotros .contenedor-nosotros .nosotros-footer {
+      grid-area: nosotros-footer;
+      flex-direction: row;
+      margin: 1rem;
+      padding: 1rem;
+      align-items: center; }
+
+/*mq areas*/
+@media screen and (min-width: 800px) {
+  .contenedor-areas {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "areas-main-derecho-laboral areas-main-derecho-laboral" "areas-main-derecho-civil areas-main-marcasypatentes" "areas-footer areas-footer";
+    gap: 1rem;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 2fr 2fr 2fr 0.5fr; }
+  .areas-main-derecho-civil {
+    grid-area: areas-main-derecho-civil;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-main-marcasypatentes {
+    grid-area: areas-main-marcasypatentes;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-main-derecho-laboral {
+    grid-area: areas-main-derecho-laboral;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-footer {
+    grid-area: areas-footer;
+    flex-direction: column; } }
+
+/*mq index*/
+@media screen and (min-width: 800px) {
+  .main-index div {
+    flex-direction: row; } }
+
+/*mq sucursales*/
+@media screen and (min-width: 800px) {
+  .contenedor-sucursales {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "sucursales-main-caba sucursales-main-zonasur" "sucursales-main-zonaoeste sucursales-main-zonanorte" "sucursales-footer sucursales-footer";
+    gap: 1rem;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr 0.5fr; }
+    .contenedor-sucursales .sucursales-main-caba {
+      grid-area: sucursales-main-caba;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonasur {
+      grid-area: sucursales-main-zonasur;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonaoeste {
+      grid-area: sucursales-main-zonaoeste;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonanorte {
+      grid-area: sucursales-main-zonanorte;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-footer {
+      grid-area: sucursales-footer;
+      flex-direction: column; } }
+
+/*mq  nosotros*/
+@media screen and (min-width: 800px) {
+  .contenedor-nosotros {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "nosotros-logodejusticia nosotros-logodejusticia nosotros-staff" "nosotros-matias nosotros-sebastian nosotros-sofia" "nosotros-footer nosotros-footer nosotros-footer";
+    gap: 1rem;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr; }
+    .contenedor-nosotros .nosotros-logodejusticia {
+      grid-area: nosotros-logodejusticia;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-staff {
+      display: block;
+      grid-area: nosotros-staff;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-matias {
+      grid-area: nosotros-matias;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-sebastian {
+      grid-area: nosotros-sebastian;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-footer {
+      grid-area: nosotros-footer;
+      flex-direction: column; } }
+
+/*variables de medida*/
+/*lista de colores*/
+.body-index header, .body-index .contenedor-index .footer-index, .body-areas header, .body-areas .contenedor-areas .areas-footer, .body-contactos header, .body-contactos .footer-contactos, .body-nosotros header, .body-nosotros .contenedor-nosotros .nosotros-footer, .body-sucursales header, .body-sucursales .contenedor-sucursales .sucursales-footer {
+  text-align: center;
+  color: #ffeaca;
+  background-color: #a82f2f;
+  background-image: linear-gradient(to right, #a82f2f, #eb786b); }
+
+/*ESTILOS DE HTML SUCURSALES*/
+.body-sucursales {
+  background-color: #eb786b;
+  /*estilos de padre para sucursales.html*/ }
+  .body-sucursales .contenedor-sucursales {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "sucursales-main-caba" "sucursales-main-zonasur"   "sucursales-main-zonaoeste" "sucursales-main-zonanorte" "sucursales-footer";
+    gap: 1rem;
+    grid-template-columns: 8fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr 0.5fr;
+    /*estilos de los hijos*/ }
+    .body-sucursales .contenedor-sucursales .sucursales-main-caba {
+      grid-area: sucursales-main-caba;
+      background-color: #f7a39a;
+      margin: 2rem;
+      margin: 1rem;
+      padding: 1rem;
+      align-items: center;
+      justify-content: space-around; }
+      .body-sucursales .contenedor-sucursales .sucursales-main-caba div {
+        text-align: center;
+        margin: 1rem; }
+      .body-sucursales .contenedor-sucursales .sucursales-main-caba .mapa {
+        width: 100%; }
+    .body-sucursales .contenedor-sucursales .sucursales-main-zonasur {
+      grid-area: sucursales-main-zonasur;
+      background-color: #85423a;
+      margin: 2rem;
+      margin: 1rem;
+      padding: 1rem;
+      align-items: center;
+      justify-content: space-around; }
+      .body-sucursales .contenedor-sucursales .sucursales-main-zonasur div {
+        text-align: center;
+        margin: 1rem; }
+      .body-sucursales .contenedor-sucursales .sucursales-main-zonasur .mapa {
+        width: 100%; }
+    .body-sucursales .contenedor-sucursales .sucursales-main-zonaoeste {
+      grid-area: sucursales-main-zonaoeste;
+      background-color: #a89f9f;
+      margin: 2rem;
+      margin: 1rem;
+      padding: 1rem;
+      align-items: center;
+      justify-content: space-around; }
+      .body-sucursales .contenedor-sucursales .sucursales-main-zonaoeste div {
+        text-align: center;
+        margin: 1rem; }
+      .body-sucursales .contenedor-sucursales .sucursales-main-zonaoeste .mapa {
+        width: 100%; }
+    .body-sucursales .contenedor-sucursales .sucursales-main-zonanorte {
+      grid-area: sucursales-main-zonanorte;
+      background-color: #f56262;
+      margin: 2rem;
+      margin: 1rem;
+      padding: 1rem;
+      align-items: center;
+      justify-content: space-around; }
+      .body-sucursales .contenedor-sucursales .sucursales-main-zonanorte div {
+        text-align: center;
+        margin: 1rem; }
+      .body-sucursales .contenedor-sucursales .sucursales-main-zonanorte .mapa {
+        width: 100%; }
+    .body-sucursales .contenedor-sucursales .sucursales-footer {
+      grid-area: sucursales-footer;
+      flex-direction: row;
+      margin: 1rem;
+      padding: 1rem;
+      align-items: center; }
+
+/*mq areas*/
+@media screen and (min-width: 800px) {
+  .contenedor-areas {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "areas-main-derecho-laboral areas-main-derecho-laboral" "areas-main-derecho-civil areas-main-marcasypatentes" "areas-footer areas-footer";
+    gap: 1rem;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 2fr 2fr 2fr 0.5fr; }
+  .areas-main-derecho-civil {
+    grid-area: areas-main-derecho-civil;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-main-marcasypatentes {
+    grid-area: areas-main-marcasypatentes;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-main-derecho-laboral {
+    grid-area: areas-main-derecho-laboral;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem; }
+  .areas-footer {
+    grid-area: areas-footer;
+    flex-direction: column; } }
+
+/*mq index*/
+@media screen and (min-width: 800px) {
+  .main-index div {
+    flex-direction: row; } }
+
+/*mq sucursales*/
+@media screen and (min-width: 800px) {
+  .contenedor-sucursales {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "sucursales-main-caba sucursales-main-zonasur" "sucursales-main-zonaoeste sucursales-main-zonanorte" "sucursales-footer sucursales-footer";
+    gap: 1rem;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr 0.5fr; }
+    .contenedor-sucursales .sucursales-main-caba {
+      grid-area: sucursales-main-caba;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonasur {
+      grid-area: sucursales-main-zonasur;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonaoeste {
+      grid-area: sucursales-main-zonaoeste;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-main-zonanorte {
+      grid-area: sucursales-main-zonanorte;
+      flex-direction: column; }
+    .contenedor-sucursales .sucursales-footer {
+      grid-area: sucursales-footer;
+      flex-direction: column; } }
+
+/*mq  nosotros*/
+@media screen and (min-width: 800px) {
+  .contenedor-nosotros {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "nosotros-logodejusticia nosotros-logodejusticia nosotros-staff" "nosotros-matias nosotros-sebastian nosotros-sofia" "nosotros-footer nosotros-footer nosotros-footer";
+    gap: 1rem;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr; }
+    .contenedor-nosotros .nosotros-logodejusticia {
+      grid-area: nosotros-logodejusticia;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-staff {
+      display: block;
+      grid-area: nosotros-staff;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-matias {
+      grid-area: nosotros-matias;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-sebastian {
+      grid-area: nosotros-sebastian;
+      flex-direction: column; }
+    .contenedor-nosotros .nosotros-footer {
+      grid-area: nosotros-footer;
+      flex-direction: column; } }
+
+/*variables de medida*/
+/*lista de colores*/
+.body-index header, .body-index .contenedor-index .footer-index, .body-areas header, .body-areas .contenedor-areas .areas-footer, .body-contactos header, .body-contactos .footer-contactos, .body-nosotros header, .body-nosotros .contenedor-nosotros .nosotros-footer, .body-sucursales header, .body-sucursales .contenedor-sucursales .sucursales-footer {
+  text-align: center;
+  color: #ffeaca;
+  background-color: #a82f2f;
+  background-image: linear-gradient(to right, #a82f2f, #eb786b); }
