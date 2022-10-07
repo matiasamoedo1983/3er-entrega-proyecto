@@ -9,7 +9,10 @@
     background-color: nth($color,1);
     header{
          @extend %estilos-identicos;
-            } 
+            }
+ } 
+
+
     /*estilos del padre para html areas*/
  .contenedor-areas{
          display: grid;
@@ -78,5 +81,5 @@
          }
 
       }
-}
+
    

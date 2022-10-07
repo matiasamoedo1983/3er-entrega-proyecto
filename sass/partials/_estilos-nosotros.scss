@@ -10,8 +10,8 @@
     header{
       @extend %estilos-identicos;
     }
-/*estilo para padre de NOSOTROS */
-.contenedor-nosotros{
+   }
+      .contenedor-nosotros{
     display: grid;
     height:$medida-principal;
     grid-template-areas: 
@@ -25,8 +25,7 @@
     grid-template-columns: 6fr ;
     grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr;
  
-    /*estilos de los hijos de NOSOTROS*/
-.nosotros-logodejusticia{
+   .nosotros-logodejusticia{
     grid-area: nosotros-logodejusticia;
     background-color: nth($color,4);
     @include estilos-comunes;
@@ -83,5 +82,3 @@
 
 }
 
-
-}

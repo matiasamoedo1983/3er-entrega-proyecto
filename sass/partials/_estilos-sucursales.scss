@@ -10,6 +10,7 @@
     header{
         @extend %estilos-identicos;
     }
+}
 /*estilos de padre para sucursales.html*/
     .contenedor-sucursales{
         display: grid;
@@ -105,5 +106,5 @@
      @extend %estilos-identicos;
      }
   }
-}
+
     

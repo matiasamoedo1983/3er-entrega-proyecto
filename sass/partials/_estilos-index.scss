@@ -10,7 +10,8 @@
     header{
         @extend %estilos-identicos;
     }
-    
+}
+
     .contenedor-index{
         display: grid;
         height: $medida-principal;
@@ -46,9 +47,5 @@
         .footer-index{
         align-items: center;
          @extend %estilos-identicos;
-
          }
     }
-
-
-}

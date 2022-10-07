@@ -7,12 +7,11 @@
         grid-template-areas: 
         "areas-main-derecho-laboral areas-main-derecho-laboral"
         "areas-main-derecho-civil areas-main-marcasypatentes"
-        "areas-footer areas-footer"
-        ; 
+        "areas-footer areas-footer";
         gap: 1rem;
         grid-template-columns: 2fr 4fr;
         grid-template-rows: 2fr 2fr 2fr 0.5fr;
-    }
+    
     .areas-main-derecho-civil{
        grid-area: areas-main-derecho-civil;
        flex-direction: column;
@@ -39,11 +38,6 @@
        flex-direction: column;
     }
  
-    }
-
-    /*mq index*/
-@media screen and (min-width:800px) {
-   
     .main-index div{
  
         flex-direction: row;
@@ -51,9 +45,6 @@
     }
  
  }
-
- /*mq sucursales*/
-@media screen and (min-width:800px) {
    .contenedor-sucursales{
       display: grid;
        height:100vh;
@@ -91,11 +82,7 @@
    }
 
    }
-}
 
-
-/*mq  nosotros*/
-@media screen and (min-width:800px) {
    .contenedor-nosotros{
       display: grid;
        height:100vh;
@@ -133,4 +120,5 @@
    }
 
    }
+
 }
